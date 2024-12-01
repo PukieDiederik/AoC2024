@@ -25,16 +25,16 @@ int main(int argc, char**argv){
     {
         a.push_back(std::atoi(l.c_str()));
         b.push_back(std::atoi(l.c_str() + 8));
-        std::sort(a.begin(), a.end());
-        std::sort(b.begin(), b.end());
     }
+
+    std::sort(a.begin(), a.end());
+    std::sort(b.begin(), b.end());
 
     // Calculate result
     int result = 0;
     for (int i = 0; i < a.size(); ++i)
     {
         result += std::abs(a[i] - b[i]);
-        std::cout << std::abs(a[i] - b[i]) << std::endl;
     }
 
     std::cout << "result: " << result << std::endl;
